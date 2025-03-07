@@ -17,48 +17,17 @@ const checkWinner = (player, computer) => {
     alert("Please choose Rock, Paper or Scissor (It is case Sensitive).");
     // location.reload();
   } else {
-    // computer = computerByChoice();
     console.log("You choosed: ", player);
     console.log("Computer choosed: ", computer);
     if (computer === player) {
       console.log("It's a tie.");
       console.log("=======================================");
     } else if (computer === "Rock") {
-      if (player === "Scissor") {
-        computerScore += 1;
-        console.log("computer scores: ", computerScore);
-        console.log("Your scores: ", userScore);
-        console.log("=======================================");
-      } else if (player === "Paper") {
-        userScore += 1;
-        console.log("computer scores: ", computerScore);
-        console.log("Your scores: ", userScore);
-        console.log("=======================================");
-      }
+      player === "Scissor" ? (computerScore += 1) : (userScore += 1);
     } else if (computer === "Scissor") {
-      if (player === "Paper") {
-        computerScore += 1;
-        console.log("computer scores: ", computerScore);
-        console.log("Your scores: ", userScore);
-        console.log("=======================================");
-      } else if (player === "Rock") {
-        userScore += 1;
-        console.log("computer scores: ", computerScore);
-        console.log("Your scores: ", userScore);
-        console.log("=======================================");
-      }
+      player === "Paper" ? (computerScore += 1) : (userScore += 1);
     } else {
-      if (player === "Rock") {
-        computerScore += 1;
-        console.log("computer scores: ", computerScore);
-        console.log("Your scores: ", userScore);
-        console.log("=======================================");
-      } else if (player === "Scissor") {
-        userScore += 1;
-        console.log("computer scores: ", computerScore);
-        console.log("Your scores: ", userScore);
-        console.log("=======================================");
-      }
+      player === "Rock" ? (computerScore += 1) : (userScore += 1);
     }
   }
   let result = [userScore, computerScore];
